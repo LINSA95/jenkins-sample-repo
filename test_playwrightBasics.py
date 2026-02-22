@@ -27,7 +27,7 @@ def test_coreLocators(page:Page):
 
 
 def test_firefoxBrowser(playwright: Playwright):
-    firefoxBrowser = playwright.firefox.launch(headless=False)
+    firefoxBrowser = playwright.firefox.launch(headless=True)
     page = firefoxBrowser.new_page()
     page.goto("https://rahulshettyacademy.com/loginpagePractise/")
     page.get_by_label("Username:").fill("rahulshettyacademy")
